@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Web Segura</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header, nav, section, footer {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f1f1f1;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        nav a {
+            display: block;
+            color: #333;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi Web Segura</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#acerca">Acerca de</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <section id="inicio">
+        <h2>Bienvenido a Mi Web Segura</h2>
+        <p>Explora un mundo de conocimiento y seguridad digital.</p>
+    </section>
+    <section id="acerca">
+        <h2>Acerca de Nosotros</h2>
+        <p>Somos apasionados por la tecnología y la seguridad en línea.</p>
+    </section>
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>¡Contáctanos para aprender más sobre seguridad cibernética!</p>
+    </section>
+    <footer>
+        <p>&copy; 2023 Mi Web Segura. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        function alertarPhishing() {
+            var urlActual = window.location.href;
+            var urlSegura = "miwebsegura.com";
+
+            if (urlActual.includes(urlSegura)) {
+                console.log("¡La URL es segura!");
+            } else {
+                alert("¡Atención! Posible intento de phishing. Verifica la autenticidad de la página.");
+            }
+        }
+
+        window.onload = alertarPhishing;
+    </script>
+</body>
+</html>
